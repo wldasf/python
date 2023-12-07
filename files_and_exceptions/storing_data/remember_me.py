@@ -9,7 +9,7 @@ def get_stored_info(path):
         return info
     else:
         return None
-    
+
 def get_new_info(path):
     """Prompt for user info."""
     info = {}
@@ -29,7 +29,12 @@ def greet_user():
     info = get_stored_info(path)
     if info:
         print(f"Your name is {info['username_key']} you are {info['age_key']} from {info['origin_key']}.")
-        print(f"Welcome back, {info['username_key']}!")
+        vertification = input(f"Are you {info['username_key']}? ")
+        if vertification == 'yes' or vertification == "Yes":
+            print(f"Welcome back, {info['username_key']}!")
+        else:
+            info = get_new_info(path)
+            print(f"We'll remember you when you come back, {info['username_key']}!")
     else:
         info = get_new_info(path)
         print(f"We'll remember you when you come back, {info['username_key']}!")
