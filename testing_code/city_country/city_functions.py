@@ -1,3 +1,3 @@
-def city_country(city, country):
-    s = f"{city}, {country}"
+def city_country(city, country, population):
+    s = f"{city}, {country} - population {population}"
     return  s.title() 
