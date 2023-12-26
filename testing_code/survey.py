@@ -18,4 +18,4 @@ class AnonymousSurvey:
         """Show all the responses that have been given."""
         print("Survey results:")
         for response in self.responses:
-            print(f"- {response}")
+            print(f"- {response.title()}")
