@@ -4,8 +4,5 @@ class Employee:
         self.last_name = last_name
         self.annual_salary = annual_salary
 
-    def give_raise(self):
-        self.annual_salary += 5000
-        annual_raise = input("Raise is $5,000 but if different add amount or press q to skip: ")
-        if annual_raise != 'q':
-            self.annual_salary += annual_raise
+    def give_raise(self, annual_raise = 5000):
+        self.annual_salary += annual_raise
